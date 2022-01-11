@@ -1,0 +1,5 @@
+{
+  "entrypoint": "com.gufli.brickplaceholders.BrickPlaceholders",
+  "name": "BrickPlaceholders",
+  "version": "1.0.0"
+}
