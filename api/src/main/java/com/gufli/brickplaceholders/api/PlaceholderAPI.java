@@ -15,6 +15,10 @@ public class PlaceholderAPI {
         placeholderManager = manager;
     }
 
+    public static Component replace(Player player, Component text) {
+        return placeholderManager.replace(player, text);
+    }
+
     public static Component replace(Player player, String text) {
         return placeholderManager.replace(player, text);
     }

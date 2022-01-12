@@ -10,6 +10,8 @@ import java.util.function.Function;
 
 public interface PlaceholderManager {
 
+    Component replace(@NotNull Player player, @NotNull Component component);
+
     Component replace(@NotNull Player player, @NotNull String text);
 
     Collection<String> placeholders();

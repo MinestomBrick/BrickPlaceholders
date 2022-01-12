@@ -11,7 +11,7 @@ public class BrickPlaceholders extends Extension {
     public void initialize() {
         getLogger().info("Enabling " + nameAndVersion() + ".");
 
-        PlaceholderAPI.registerManager(new SimplePlaceholderManager());
+        PlaceholderAPI.registerManager(new BrickPlaceholderManager());
 
         // default placeholders
         PlaceholderAPI.registerReplacer("username", p -> Component.text(p.getUsername()));

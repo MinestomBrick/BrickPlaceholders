@@ -16,41 +16,21 @@ import java.util.function.Function;
 import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 
-public class SimplePlaceholderManager implements PlaceholderManager {
+public class BrickPlaceholderManager implements PlaceholderManager {
 
     private final static Pattern PATTERN = Pattern.compile("(\\{[^}]+})");
     private final Map<String, BiFunction<Player, String, Component>> replacers = new HashMap<>();
 
     @Override
     public Component replace(@NotNull Player player, @NotNull String text) {
-        return Component.text().asComponent()
+        return replace(player, Component.text(text));
+    }
+
+    @Override
+    public Component replace(@NotNull Player player, @NotNull Component component) {
+        return component
                 .replaceText(builder -> builder.match(PATTERN)
                 .replacement((matchResult, textbuilder) -> replace(player, matchResult, textbuilder)));
-
-//        int pos = 0;
-//        while ( m.find() ) {
-//            String placeholder = m.group(1).toLowerCase();
-//            placeholder = placeholder.substring(1, placeholder.length()-1); // remove brackets { and }
-//
-//            if ( !replacers.containsKey(placeholder) ) {
-//                continue;
-//            }
-//
-//            Component replacement = replacers.get(placeholder).apply(player, placeholder);
-//            if ( replacement == null ) {
-//                replacement = Component.text("");
-//            }
-//
-//            sb.append(Component.text(text.substring(pos, m.start())));
-//            pos = m.end();
-//            if (m.start(1) >= 0) { // check if group 1 matched
-//                sb.append(Component.text(text.substring(pos, m.start())));
-//                sb.append(s, m.start(1), m.end(1)); // replace with group 1
-//            }
-//        }
-//        m.appendTail(sb);
-//
-//        return builder.build();
     }
 
     private ComponentLike replace(Player player, MatchResult match, TextComponent.Builder builder) {
@@ -66,8 +46,7 @@ public class SimplePlaceholderManager implements PlaceholderManager {
             replacement = Component.text("");
         }
 
-        builder.append(replacement);
-        return builder.build();
+        return replacement;
     }
 
     @Override
