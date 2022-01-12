@@ -12,12 +12,13 @@ compileJava {
 
 allprojects {
     apply plugin: 'java'
+    apply plugin: 'maven-publish'
 
     sourceCompatibility = 1.17
     targetCompatibility = 1.17
 
-    group = parent.group;
-    version = parent.version;
+    group = this.group;
+    version = this.version;
 
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'

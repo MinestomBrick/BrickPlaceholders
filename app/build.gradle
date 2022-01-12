@@ -24,10 +24,10 @@ shadowJar {
     archiveBaseName.set("${rootProject.name}")
     archiveVersion.set("${rootProject.version}")
 
-    doLast {
-        copy {
-            from "build/libs/" + archiveFileName.get()
-            into "../../server/extensions"
-        }
-    }
+//    doLast {
+//        copy {
+//            from "build/libs/" + archiveFileName.get()
+//            into "../../server/extensions"
+//        }
+//    }
 }
