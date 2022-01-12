@@ -10,7 +10,7 @@ compileJava {
     targetCompatibility = 1.17
 }
 
-subprojects {
+allprojects {
     apply plugin: 'java'
 
     sourceCompatibility = 1.17
