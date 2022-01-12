@@ -1,4 +1,4 @@
-rootProject.name = 'BrickText'
+rootProject.name = 'BrickPlaceholders'
 
 include (
         'api',
