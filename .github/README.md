@@ -7,7 +7,17 @@ An extension for [Minestom](https://github.com/Minestom/Minestom) with an api fo
 Get the latest jar file from [Github actions](https://github.com/MinestomBrick/BrickPermissions/actions) 
 and place it in the extension folder of your minestom server.
 
-## API
+## Usage
+
+```
+repositories {
+    maven { url "https://repo.jorisg.com/snapshots" }
+}
+
+dependencies {
+    implementation 'com.gufli.brickplaceholders:api:1.0-SNAPSHOT'
+}
+```
 
 ```java
 PlaceholderAPI.registerReplacer("level", (player) -> {

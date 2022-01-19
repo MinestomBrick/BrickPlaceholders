@@ -6,16 +6,21 @@ dependencies {
     compileOnly 'com.github.Minestom:Minestom:-SNAPSHOT'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.java
+publishing {
+    repositories {
+        maven {
+            name = "Jorisg"
+            url = uri("https://repo.jorisg.com/snapshots")
+            credentials(org.gradle.api.credentials.PasswordCredentials)
+        }
+    }
 
-                groupId = rootProject.group
-                artifactId = 'placeholders'
-                version = rootProject.version
-            }
+    publications {
+        release(MavenPublication) {
+            from components.java
+            groupId = rootProject.group
+            artifactId = project.name
+            version = rootProject.version
         }
     }
 }
