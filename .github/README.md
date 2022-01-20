@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.gufli.brickplaceholders:api:1.0-SNAPSHOT'
+    compileOnly 'com.gufli.brickplaceholders:api:1.0-SNAPSHOT'
 }
 ```
 
