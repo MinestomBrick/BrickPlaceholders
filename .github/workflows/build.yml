@@ -20,6 +20,7 @@ jobs:
         run: './gradlew test'
 
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
