@@ -1,6 +1,6 @@
-package com.gufli.brickplaceholders.app;
+package org.minestombrick.placeholders.app;
 
-import com.gufli.brickplaceholders.api.PlaceholderManager;
+import org.minestombrick.placeholders.api.PlaceholderManager;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.ComponentLike;
 import net.kyori.adventure.text.TextComponent;

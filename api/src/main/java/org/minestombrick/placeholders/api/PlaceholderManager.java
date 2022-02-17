@@ -1,4 +1,4 @@
-package com.gufli.brickplaceholders.api;
+package org.minestombrick.placeholders.api;
 
 import net.kyori.adventure.text.Component;
 import net.minestom.server.entity.Player;

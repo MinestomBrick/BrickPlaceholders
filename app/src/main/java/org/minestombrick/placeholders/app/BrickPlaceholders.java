@@ -1,6 +1,6 @@
-package com.gufli.brickplaceholders.app;
+package org.minestombrick.placeholders.app;
 
-import com.gufli.brickplaceholders.api.PlaceholderAPI;
+import org.minestombrick.placeholders.api.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
 import net.minestom.server.entity.Player;
 import net.minestom.server.extensions.Extension;
@@ -14,8 +14,8 @@ public class BrickPlaceholders extends Extension {
         PlaceholderAPI.registerManager(new BrickPlaceholderManager());
 
         // default placeholders
-        PlaceholderAPI.registerReplacer("username", p -> Component.text(p.getUsername()));
-        PlaceholderAPI.registerReplacer("playername", Player::getName);
+        PlaceholderAPI.get().registerReplacer("username", p -> Component.text(p.getUsername()));
+        PlaceholderAPI.get().registerReplacer("playername", Player::getName);
 
         getLogger().info("Enabled " + nameAndVersion() + ".");
     }

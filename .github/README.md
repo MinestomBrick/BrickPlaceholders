@@ -15,23 +15,18 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.gufli.brickplaceholders:api:1.0-SNAPSHOT'
+    compileOnly 'org.minestombrick.placeholders:api:1.0-SNAPSHOT'
 }
 ```
 
 ```java
-PlaceholderAPI.registerReplacer("level", (player) -> {
+PlaceholderAPI.get().registerReplacer("level", (player) -> {
     return Component.text(player.getLevel());
 });
 
-Component result = PlaceholderAPI.replace(player, text);
+Component result = PlaceholderAPI.get().replace(player, text);
 ```
 
-## Credits
+Check the [javadocs](https://minestombrick.github.io/BrickPlaceholders)
 
-* The [Minestom](https://github.com/Minestom/Minestom) project
-
-## Contributing
-
-Check our [contributing info](CONTRIBUTING.md)
 
