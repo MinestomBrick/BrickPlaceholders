@@ -4,7 +4,7 @@ An extension for [Minestom](https://github.com/Minestom/Minestom) with an api fo
 
 ## Install
 
-Get the latest jar file from [Github actions](https://github.com/MinestomBrick/BrickPermissions/actions) 
+Get the [release](https://github.com/MinestomBrick/BrickPlaceholders/releases)
 and place it in the extension folder of your minestom server.
 
 ## Usage
